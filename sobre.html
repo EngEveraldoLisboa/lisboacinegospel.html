@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Mim | Lisboa Cine Gospel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="menu">
+    <div class="logo">Lisboa Cine Gospel</div>
+    <nav class="menu-nav" id="menu-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="desenhos.html">Desenhos</a></li>
+        <li><a href="filmes-biblicos.html">Filmes Bíblicos</a></li>
+        <li><a href="fatos-reais.html">Baseados em Fatos Reais</a></li>
+        <li><a href="teatro.html">Teatro</a></li>
+        <li><a href="sobre.html">Sobre Mim</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+  </header>
+
+  <main class="sobre">
+    <div class="foto-sobre">
+      <img src="img/li.jpg" alt="Foto do Criador">
+    </div>
+    <div class="texto-sobre">
+      <h1>Sobre Mim</h1>
+      <p>
+        Somos uma equipe especializada no desenvolvimento de softwares e aplicações web, comprometidos em oferecer soluções digitais de qualidade. Nosso site conta também com um aplicativo disponível para Android e iOS, proporcionando ainda mais praticidade. Aqui você encontra filmes e desenhos cristãos selecionados especialmente para fortalecer sua fé. E em breve, teremos centenas de novos conteúdos disponíveis para você.
+      </p>
+      <p>
+        Nossa missão é proporcionar um espaço seguro, leve e edificante para você e sua família. Sinta-se à vontade para explorar o site e enviar sugestões.
+      </p>
+    </div>
+  </main>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const menuNav = document.getElementById('menu-nav');
+
+    menuIcon.addEventListener('click', () => {
+      menuNav.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

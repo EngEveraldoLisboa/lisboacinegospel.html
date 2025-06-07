@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistir | Lisboa Cine Gospel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="menu">
+    <div class="logo">Lisboa Cine Gospel</div>
+    <nav class="menu-nav" id="menu-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="desenhos.html">Desenhos</a></li>
+        <li><a href="filmes-biblicos.html">Filmes Bíblicos</a></li>
+        <li><a href="fatos-reais.html">Baseados em Fatos Reais</a></li>
+        <li><a href="teatro.html">Teatro</a></li>
+        <li><a href="sobre.html">Sobre Mim</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+  </header>
+
+  <main class="assistir">
+    <h1>Assistir: Título do Filme</h1>
+
+    <div class="video-player">
+      <iframe 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="Player de vídeo"
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="botoes-player">
+      <a href="detalhes.html" class="btn voltar">← Voltar</a>
+    </div>
+  </main>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const menuNav = document.getElementById('menu-nav');
+
+    menuIcon.addEventListener('click', () => {
+      menuNav.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

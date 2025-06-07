@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Filme | Lisboa Cine Gospel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="menu">
+    <div class="logo">Lisboa Cine Gospel</div>
+    <nav class="menu-nav" id="menu-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="desenhos.html">Desenhos</a></li>
+        <li><a href="filmes-biblicos.html">Filmes Bíblicos</a></li>
+        <li><a href="fatos-reais.html">Baseados em Fatos Reais</a></li>
+        <li><a href="teatro.html">Teatro</a></li>
+        <li><a href="sobre.html">Sobre Mim</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+  </header>
+
+  <main class="detalhes">
+    <h1>Guardião do Nosso Pai</h1>
+    <img class="fi" src="img/our.jpg" alt="Capa do Filme">
+    <p> A sinopse de "Guardiões do Nosso Pai" (A Origem dos Guardiões) conta a história de um grupo de seres míticos, como Papai Noel, Fada do Dente, Coelhinho da Páscoa e Sandman, que são os Guardiões da esperança e crenças infantis. Quando o Bicho-Papão (Pitch) ameaça afundar o mundo nas trevas, eles precisam unir forças e recrutar Jack Frost para derrotá-lo. 
+    </p>
+    <p> Elaboração:
+Os Guardiões:
+Papai Noel, Fada do Dente, Coelhinho da Páscoa e Sandman são seres míticos responsáveis por manter viva a esperança e a crença das crianças no mundo.
+O Bicho-Papão (Pitch):
+É um espírito mal que deseja extinguir a esperança e a alegria das crianças, levando-as ao desespero e ao medo.
+A Ameaça:
+Pitch se torna uma ameaça para o mundo das crianças, pois ele tenta esvaziar a esperança e o sonho das crianças.
+A União:
+Os Guardiões se unem para proteger o mundo das crianças, e para isso, eles precisam recrutar Jack Frost para ajudar na luta contra Pitch.
+A Missão:
+Os Guardiões, incluindo Jack Frost, lutam contra Pitch para salvar o mundo e garantir que as crianças continuem a acreditar na magia e na esperança.
+A Luta:
+A luta contra o Bicho-Papão é uma batalha pela esperança e pela crença das crianças, com os Guardiões enfrentando as trevas para proteger o mundo.
+A Vitória:
+No final, os Guardiões, com a ajuda de Jack Frost, conseguem derrotar o Bicho-Papão e garantir que a esperança e a crença das crianças permaneçam vivas no mundo. </p>
+
+    <button class="btn assistir" onclick="abrirPlayer()">▶ Assistir</button>
+  </main>
+
+  <!-- Modal do Player -->
+  <div class="modal" id="modalPlayer">
+    <div class="modal-content">
+      <span class="fechar" onclick="fecharPlayer()">&times;</span>
+      <div class="video-player">
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/a8yL2Omh6kU?si=-2bq3dPB5A7YAuFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const menuNav = document.getElementById('menu-nav');
+
+    menuIcon.addEventListener('click', () => {
+      menuNav.classList.toggle('active');
+    });
+
+    function abrirPlayer() {
+      document.getElementById('modalPlayer').style.display = 'block';
+    }
+
+    function fecharPlayer() {
+      document.getElementById('modalPlayer').style.display = 'none';
+    }
+
+    // Fechar ao clicar fora do modal
+    window.onclick = function(event) {
+      const modal = document.getElementById('modalPlayer');
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>

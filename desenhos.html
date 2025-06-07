@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desenhos | Lisboa Cine Gospel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="menu">
+    <div class="logo">Lisboa Cine Gospel</div>
+    <nav class="menu-nav" id="menu-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="desenhos.html">Desenhos</a></li>
+        <li><a href="filmes-biblicos.html">Filmes Bíblicos</a></li>
+        <li><a href="fatos-reais.html">Baseados em Fatos Reais</a></li>
+        <li><a href="teatro.html">Teatro</a></li>
+        <li><a href="#">Sobre Mim</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+  </header>
+
+  <section class="vitrine">
+    <h2 class="titulo-vitrine">Desenhos</h2>
+    <div class="container-vitrine">
+
+      <div class="filme">
+        <img src="img/ygdavi.jpg" alt="Desenho 1">
+        <h3>Young Rei david</h3>
+        <a href="ygdavi.html">Ver Mais</a>
+      </div>
+
+      <div class="filme">
+        <img src="img/cego.png" alt="Desenho 2">
+        <h3>O Cego de Jericó</h3>
+        <a href="cego.html">Ver Mais</a>
+      </div>
+
+      <!-- Adicione mais desenhos -->
+      
+    </div>
+  </section>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const menuNav = document.getElementById('menu-nav');
+
+    menuIcon.addEventListener('click', () => {
+      menuNav.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

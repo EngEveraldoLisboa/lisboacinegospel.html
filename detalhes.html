@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Filme | Lisboa Cine Gospel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="menu">
+    <div class="logo">Lisboa Cine Gospel</div>
+    <nav class="menu-nav" id="menu-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="desenhos.html">Desenhos</a></li>
+        <li><a href="filmes-biblicos.html">Filmes Bíblicos</a></li>
+        <li><a href="fatos-reais.html">Baseados em Fatos Reais</a></li>
+        <li><a href="teatro.html">Teatro</a></li>
+        <li><a href="sobre.html">Sobre Mim</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
+  </header>
+
+  <main class="detalhes">
+    <h1>Deus não esta morto</h1>
+    <img class="fi" src="img/deus.jpg" alt="Capa do Filme">
+    <p>Quando o jovem Josh Wheaton (Shane Harper) entra na universidade, ele conhece um arrogante professor de filosofia (Kevin Sorbo) que não acredita em Deus. O aluno reafirma sua fé, e é desafiado pelo professor a comprovar a existência de Deus. Começa uma batalha entre os dois homens, que estão dispostos a tudo para justificar o seu ponto de vista - até se afastar das pessoas mais importantes para eles.</p>
+
+    <button class="btn assistir" onclick="abrirPlayer()">▶ Assistir</button>
+  </main>
+
+  <!-- Modal do Player -->
+  <div class="modal" id="modalPlayer">
+    <div class="modal-content">
+      <span class="fechar" onclick="fecharPlayer()">&times;</span>
+      <div class="video-player">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/6qRJO4MG0oE?si=wfZl70inGu9wVkz9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const menuNav = document.getElementById('menu-nav');
+
+    menuIcon.addEventListener('click', () => {
+      menuNav.classList.toggle('active');
+    });
+
+    function abrirPlayer() {
+      document.getElementById('modalPlayer').style.display = 'block';
+    }
+
+    function fecharPlayer() {
+      document.getElementById('modalPlayer').style.display = 'none';
+    }
+
+    // Fechar ao clicar fora do modal
+    window.onclick = function(event) {
+      const modal = document.getElementById('modalPlayer');
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
